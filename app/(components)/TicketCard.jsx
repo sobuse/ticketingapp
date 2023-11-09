@@ -18,8 +18,16 @@ const TicketCard = () => {
         <h4>Ticket Title</h4>
         <hr className='h-px border-0 bg-page mb-2'/>
         <p className='whitwspace-pre-wrap'>This is the ticket description! Please do this ticket</p>
+        <div className='flex-grow'></div>
+        <div className='flex mt-2'>
+        <div className='flex flex-col'>
+        <p className='text-xs my-1'>11/9/23 1:01PM</p>
         <ProgessDisplay/>
+        </div>
+        <div className='ml-auto flex item-end'>
         <StatusDisplay/> 
+        </div>
+        </div>
     </div>
   )
 }
