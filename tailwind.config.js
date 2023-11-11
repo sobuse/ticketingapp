@@ -12,6 +12,9 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      borderRadius: {
+        xl: '1.5rem', 
+      },
       colors: {
         nav: "#18222f",
         page:"#2b3441",
