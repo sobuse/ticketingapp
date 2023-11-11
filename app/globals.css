@@ -1,9 +1,22 @@
+
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+form {
+  @apply
+    rounded-xl
+    p-4;
+}
 
-/* @layer base {
+label {
+  @apply
+    mt-4;
+} 
+
+ @layer base {
   h1,
   h2,
   h3,
@@ -12,16 +25,16 @@
     @apply font-bold;
   }
   h1{
-    @apply text-4x1;
+    @apply text-4xl;
   }
   h2{
-    @apply text-3x1;
+    @apply text-3xl;
   }
   h3{
-    @apply text-2x1;
+    @apply text-2xl;
   }
   h4{
-    @apply text-x1;
+    @apply text-xl;
   }
   p{
     @apply text-sm text-default-text;
@@ -48,4 +61,4 @@
        rounded-md
        transition-colors block;
 
-  }} */
+  }} 
