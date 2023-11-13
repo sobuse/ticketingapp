@@ -15,19 +15,42 @@ const TicketForm = () => {
         }));
     };
 
-    const handleSubmit = async (e) =>{
-       e.preventDefault();
-       const res = await fetch("api/Tickets",{
-        method: "POST",
-        body: JSON.stringify({formData}),
-        "content-type": "application/json"
-       })
-       if(!res.ok){
-        throw new Error("Failed to create Ticket.")
-       }
-       router.refresh()
-       router.push("/" )
-    }
+    // const handleSubmit = async (e) =>{
+    //    e.preventDefault();
+    //    const res = await fetch("/api/Tickets",{
+    //     method: "POST",
+    //     body: JSON.stringify({formData}),
+    //     "content-type": "application/json"
+    //    })
+    //    if(!res.ok){
+    //     throw new Error("Failed to create Ticket.")
+    //    }
+    //    router.refresh()
+    //    router.push("/" )
+    // }
+
+    const handleSubmit = async (e) => {
+        try {
+          e.preventDefault();
+          const res = await fetch("/api/Tickets", {
+            method: "POST",
+            body: JSON.stringify({ formData }),
+            headers: {
+              "Content-Type": "application/json",
+            },
+          });
+      
+          if (!res.ok) {
+            throw new Error("Failed to create Ticket.");
+          }
+      
+          router.refresh();
+          router.push("/");
+        } catch (error) {
+          console.log("Error in handleSubmit:", error);
+        }
+      };
+      
     const startingTicketData = {
         title: "",
         description: "",
