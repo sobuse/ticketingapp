@@ -4,12 +4,12 @@ mongoose.connect(process.env.MONGODB_URI);
 mongoose.Promise = global.Promise
 
 const ticketShema = new Schema({
-    title: stringify,
-    description: stringify,
-    category: string,
+    title: String,
+    description: String,
+    category: String,
     priority:Number,
     progress:Number,
-    status:string,
+    status:String,
     active:Boolean,
 },
 {
