@@ -3,6 +3,8 @@ import DeleteBlock from './DeleteBlock'
 import ProgessDisplay from './ProgressDisplay'
 import ProrityDisplay from './ProrityDisplay'
 import StatusDisplay from './StatusDisplay'
+import Link from 'next/link';
+
 
 const TicketCard = ({ticket}) => {
 
@@ -30,6 +32,7 @@ const TicketCard = ({ticket}) => {
         </div>
 
         </div>
+        <Link href={`/TicketPage/${ticket._id}`} style={{display: "contents"}}>
         <h4>{ticket.title}</h4>
         <hr className='h-px border-0 bg-page mb-2'/>
         <p className='whitwspace-pre-wrap'>{ticket.description}</p>
@@ -44,6 +47,7 @@ const TicketCard = ({ticket}) => {
         <StatusDisplay status={ticket.status}/> 
         </div>
         </div>
+        </Link>
     </div>
   )
 }
